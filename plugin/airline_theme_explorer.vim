@@ -1,9 +1,9 @@
 " Define function once only
-if exists('loaded_airlie_theme_explorer') || &cp
+if exists('loaded_airline_theme_explorer') || &cp
   finish
 endif
 
-let loaded_airlie_theme_explorer = 1
+let loaded_airline_theme_explorer = 1
 
 " Create commands
 if !exists(":AirlineThemeExplorer")
