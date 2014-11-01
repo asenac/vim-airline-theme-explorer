@@ -23,7 +23,6 @@ function! <SID>AirlineThemeExplorer()
   setlocal noswapfile
   setlocal nowrap
 
-  map <buffer> <silent> ? :call <SID>ToggleHelp()<cr>
   map <buffer> <silent> <cr> :call <SID>SelectScheme()<cr>
   map <buffer> <silent> <space> :call <SID>SelectScheme()<cr>j
   map <buffer> <silent> <2-leftmouse> :call <SID>SelectScheme(0)<cr>
@@ -50,21 +49,6 @@ endfunction
 
 " Reset {{{1
 function! <SID>Reset()
-endfunction
-
-" ToggleHelp {{{1
-function! <SID>ToggleHelp()
-  " Save position
-  normal! mZ
-
-  let header = "\" Press ? for Help\n"
-  silent! put! =header
-
-  " Jump back where we came from if possible.
-  0
-  if line("'Z") != 0
-    normal! `Z
-  endif
 endfunction
 
 "----------------------------------------------------------"
